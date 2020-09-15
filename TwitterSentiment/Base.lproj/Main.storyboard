@@ -15,34 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="139" translatesAutoresizingMaskIntoConstraints="NO" id="yVg-Kw-zFW">
-                                <rect key="frame" x="55.5" y="166" width="303" height="564"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="139" translatesAutoresizingMaskIntoConstraints="NO" id="yVg-Kw-zFW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter Sentiment Analysis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oU0-nT-fpu">
-                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
+                                        <rect key="frame" x="55.5" y="0.0" width="303" height="43.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sentiment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKD-Pe-6cs">
-                                        <rect key="frame" x="89.5" y="169" width="124.5" height="35"/>
+                                        <rect key="frame" x="145" y="182.5" width="124.5" height="247.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Topic, Account, Hashtag..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wNW-gT-cry">
-                                        <rect key="frame" x="10" y="343" width="283" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="gcT-7S-Mwc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKN-5o-Hdn">
-                                        <rect key="frame" x="76.5" y="516" width="150" height="48"/>
+                                        <rect key="frame" x="132" y="569" width="150" height="60"/>
                                         <color key="backgroundColor" red="0.84313725490196079" green="0.67843137254901964" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="PwD-2o-bpB"/>
+                                            <constraint firstAttribute="height" constant="60" id="6cL-1z-c1d"/>
+                                            <constraint firstAttribute="width" constant="150" id="F4P-wa-qXY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Analyse">
@@ -52,6 +45,15 @@
                                             <action selector="predictPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XOb-D3-Vhc"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Topic, Account, Hashtag..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wNW-gT-cry">
+                                        <rect key="frame" x="10" y="768" width="394" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BQI-M9-vii"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="gcT-7S-Mwc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="wNW-gT-cry" firstAttribute="leading" secondItem="yVg-Kw-zFW" secondAttribute="leading" constant="10" id="gHd-2N-Qd9"/>
@@ -61,8 +63,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.90980392156862744" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yVg-Kw-zFW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FeP-0C-8Gh"/>
-                            <constraint firstItem="yVg-Kw-zFW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iW8-gC-HKY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yVg-Kw-zFW" secondAttribute="bottom" id="P4Q-7F-BbW"/>
+                            <constraint firstItem="yVg-Kw-zFW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SZP-2l-F4N"/>
+                            <constraint firstItem="yVg-Kw-zFW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d1l-Wa-PTl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yVg-Kw-zFW" secondAttribute="trailing" id="l3F-1e-63n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
