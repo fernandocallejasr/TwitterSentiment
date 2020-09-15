@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var sentimentLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var analysisButton: UIButton!
     
     let tweetCount = 100
     
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        analysisButton.layer.cornerRadius = 22.0
     }
     
     @IBAction func predictPressed(_ sender: UIButton) {
