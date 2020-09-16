@@ -21,11 +21,14 @@ class ViewController: UIViewController {
     
     let sentimentClassifier = TweetSentimentClassifier()
     
-    let swifter = Swifter(consumerKey: "", consumerSecret: "")
+    let swifter = Swifter(consumerKey: "your Twitter API key", consumerSecret: "your Twitter API secret key")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        textField.delegate = self
+        
         analysisButton.layer.cornerRadius = 22.0
     }
     
@@ -109,6 +112,31 @@ class ViewController: UIViewController {
             self.sentimentLabel.text = "😴"
         }
         
+    }
+    
+}
+
+//MARK: - Text Field Delegate Methods
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            textField.endEditing(true)
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        fetchTweets()
+        
+        resignFirstResponder()
     }
     
 }

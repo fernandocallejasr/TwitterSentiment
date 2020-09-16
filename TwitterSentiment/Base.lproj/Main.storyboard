@@ -35,7 +35,7 @@
                                         <color key="backgroundColor" red="0.84313725490196079" green="0.67843137254901964" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="6cL-1z-c1d"/>
-                                            <constraint firstAttribute="width" constant="150" id="F4P-wa-qXY"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="F4P-wa-qXY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Analyse">
